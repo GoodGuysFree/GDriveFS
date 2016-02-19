@@ -852,6 +852,10 @@ def mount(auth_storage_filepath, mountpoint, debug=None, nothreads=None,
             else:
                 v = True
 
+            # ignore the "user" option so we can put in fstab easily
+            if k == "user":
+                continue
+
             # We have a list of provided options. See which match against our 
             # application options.
 
