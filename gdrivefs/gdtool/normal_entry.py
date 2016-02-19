@@ -213,7 +213,7 @@ class NormalEntry(object):
             return data
 
     def get_data(self):
-            original = dict([(key.encode('ASCII'), value) 
+            original = dict([(key.encode('utf8'), value)
                                 for key, value 
                                 in self.__raw_data.iteritems()])
 

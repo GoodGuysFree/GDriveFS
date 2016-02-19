@@ -197,7 +197,7 @@ class OpenedFile(object):
         self.__is_loaded = False
         self.__is_dirty = False
 
-        temp_filename = self.__entry_id.encode('ASCII')
+        temp_filename = self.__entry_id.encode('utf8')
         om = get_om()
         self.__temp_filepath = os.path.join(om.temp_path, temp_filename)
 
